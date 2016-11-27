@@ -8,12 +8,17 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
 
         <link rel="stylesheet" href="/static/assets/main.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-with-addons.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.7/react-bootstrap.min.js"></script>
+        <script src="/static/thirdparty/system.js"></script>
+        <script src="/static/thirdparty/react.min.js"></script>
+        <script src="/static/thirdparty/react-dom.min.js"></script>
+        <script src="/static/thirdparty/react-bootstrap.min.js"></script>
     </head>
     <body>
         <div id="root"></div>
-        <script src="app/index.js"></script>
+
+        <script>
+            System.config({ "baseURL": "/static/app" });
+            System.import("index.js");
+         </script>
     </body>
 </html>
