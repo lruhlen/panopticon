@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "panopticon",
   "version": "0.0.1",
-  "description": "Dan's frontend boilerplate",
+  "description": "Panopticon frontend",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DanThomson/boilerplate.git"
+    "url": "https://github.com/lruhlen/panopticon.git"
   },
   "keywords": [
-    "boilerplate"
+    "government_surveillance"
   ],
   "author": "panopticon",
-  "license": "MIT Licences",
+  "license": "MIT Licenses",
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
