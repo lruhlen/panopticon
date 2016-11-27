@@ -6,11 +6,13 @@ import datetime
 from django.http import HttpResponse
 
 # panopticon packages
-from server.bill_info import get_bill_ids
+from server.bill_info import get_bills
 
 
 def bills(request):
-    obj = {"update_datetime": datetime.datetime.now().isoformat(),
-           "bill_info": get_bill_ids(),
+    dt = datetime.datetime.now().isoformat()
+    obj = {
+        "update_datetime": dt,
+        "bills": get_bills(),
     }
     return HttpResponse(json.dumps(obj))

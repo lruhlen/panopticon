@@ -15,15 +15,13 @@
 import datetime
 
 
-def get_bill_ids():
-    return {
-        "bill_ids":[
-            {"bill_id":  12334, "bill_display_name": "H.R. 123"},
-            {"bill_id":495877, "bill_display_name": "S. 1122"},
-            {"bill_id": 94757, "bill_display_name": "S. 9876"},
-            {"bill_id":  2295, "bill_display_name": "H.R. 4873"},
-        ],
-    }
+def get_bills():
+    return  [
+        {"id_num": 12334, "display_name": "H.R. 123"},
+        {"id_num":495877, "display_name": "S. 1122"},
+        {"id_num": 94757, "display_name": "S. 9876"},
+        {"id_num":  2295, "display_name": "H.R. 4873"},
+    ]
 
 
 def get_bill_title(bill_id=None):
