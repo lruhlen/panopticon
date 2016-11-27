@@ -34,5 +34,5 @@ function requestUpdate() {
   ajax.send();
 }
 
-// setInterval(requestUpdate, 10000); // Perform requestUpdate every 10 seconds
+setInterval(requestUpdate, 10000); // Perform requestUpdate every 10 seconds
 requestUpdate(); // Update right now, so user need not wait 10 seconds for first mapdraw
