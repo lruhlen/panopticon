@@ -2,39 +2,37 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 
-// class OneBigViewPort extends React.Component {
-// 	render() {
-// 		return <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">{this.props.children}</svg>;
-// 	}
-// }
 
-function OneBigViewPort(props) {
-	return <svg width="100%" height="100%" viewBox="0 0 100 100">{props.children}</svg>;
-}
+const SERVER_ADDRESS = 'http://localhost:8000/bills/';
+const ajax = new XMLHttpRequest();
 
-function MyRect(props) {
-	if (props.count > 5){
-		return null;
-	}
+function renderResponse() {
+  var jsx;
 
-	let red = props.count * 20;
-	let green = 250 - (props.count * 20);
-	let blue = 128 - (props.count * 20);
-	let color =	`rgb(${red}, ${green}, ${blue})`;
-	return (
-		<g transform>
-			<rect x={props.count * 5} y={props.count * 5} width={50 - props.count * 10} height={50 - props.count * 10} fill={color} />
-			<MyRect count={props.count + 1}/>
-		</g>
-	);
-}
-
-class Hello extends React.Component {
-  render() {
-    return <h1>Hello, World!</h1>;
+  if (ajax.readyState === XMLHttpRequest.DONE) {
+    if (ajax.status === 200) {
+      // let json = JSON.parse(ajax.responseText);
+      jsx = (
+        <div>
+          {ajax.responseText}
+        </div>
+      );
+    } else {
+      jsx = <div>Error response status {ajax.status}</div>;
+    }
+  } else {
+    jsx = <div>Error readyState {ajax.readyState}</div>;
   }
+
+  ReactDOM.render(jsx, document.getElementById('root'));
 }
 
+ajax.onreadystatechange = renderResponse;
 
+function requestUpdate() {
+  ajax.open('GET', SERVER_ADDRESS);
+  ajax.send();
+}
 
-ReactDOM.render(<OneBigViewPort><MyRect count={1} /></OneBigViewPort>, document.getElementById('root'));
+// setInterval(requestUpdate, 10000); // Perform requestUpdate every 10 seconds
+requestUpdate(); // Update right now, so user need not wait 10 seconds for first mapdraw
