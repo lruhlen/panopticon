@@ -91,7 +91,7 @@ Views 1, 2, and 3 can be filtered on any combination of the following attributes
 
 -----
 
-## Prepare your body for front end development
+## Prepare for front end development
 This is for Mac.  If you're not on Mac, you're hosed.
 
 1. Install Postgres (postgresapp.com)
@@ -102,3 +102,12 @@ This is for Mac.  If you're not on Mac, you're hosed.
 	+ With anaconda: `conda create --name panopticon_app python=3`, then `source activate panopticon_app`
 3. Install Django: `pip install Django`
 4. Install psycopg2 `pip install psycopg2`
+1. Now, `cd` into the `client` dir, and run `npm install`
+1. In the top level of the `client` dir, run `mkdir app`, then `npm run build-once`
+2. Then, `cd ..; django-admin startproject server`.  This creates Django project.  You only need to do this once per project.
+
+
+### Some notes on running Django
+1. Typically, will enter stuff like this from w/in the project root (in this case, `/panopticon`)
+	+ `python manage.py <some command>`
+1. To run the development (NOT PRODUCTION) server, enter `python manage.py runserver` 	
