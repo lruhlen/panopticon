@@ -15,16 +15,17 @@
   "keywords": [
     "boilerplate"
   ],
-  "author": "Daniel Thomson",
-  "license": "unlicense",
+  "author": "panopticon",
+  "license": "MIT Licences",
   "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-bootstrap": "^0.30.7"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-plugin-transform-strict-mode": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
-    "babel-preset-react": "^6.16.0"
+    "babel-preset-react": "^6.16.0",
   }
 }
