@@ -1,0 +1,30 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "description": "Dan's frontend boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-once": "./node_modules/.bin/babel src/index.js --out-file app/index.js",
+    "build": "./node_modules/.bin/babel src/index.js --watch --out-file app/index.js --source-maps inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanThomson/boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate"
+  ],
+  "author": "Daniel Thomson",
+  "license": "unlicense",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-plugin-transform-strict-mode": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0"
+  }
+}
