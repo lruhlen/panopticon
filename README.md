@@ -87,3 +87,18 @@ Views 1, 2, and 3 can be filtered on any combination of the following attributes
 5. Bill topic(s)
     + May require additional calculations
 6. Committee jurisdiction of each bill
+
+
+-----
+
+## Prepare your body for front end development
+This is for Mac.  If you're not on Mac, you're hosed.
+
+1. Install Postgres (postgresapp.com)
+	+ After installation add the following line to your `~/.bash_profile`: `export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin`
+	+ Then, run `source ~/.bash_profile` in any terminal windows you have open. 
+1. Install npm (aka node): `brew install node`
+2. Make sure you're using python3
+	+ With anaconda: `conda create --name panopticon_app python=3`, then `source activate panopticon_app`
+3. Install Django: `pip install Django`
+4. Install psycopg2 `pip install psycopg2`
