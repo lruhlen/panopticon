@@ -111,3 +111,4 @@ This is for Mac.  If you're not on Mac, you're hosed.
 1. Typically, will enter stuff like this from w/in the project root (in this case, `/panopticon`)
 	+ `python manage.py <some command>`
 1. To run the development (NOT PRODUCTION) server, enter `python manage.py runserver` 	
+1. Anytime you edit/update `client/index.js`, you need to re-run `npm run build-once`
