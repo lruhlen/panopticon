@@ -1,7 +1,6 @@
 //# src/index.js
 import {Page} from 'page.js';
 
-
 const SERVER_ADDRESS = 'http://localhost:8000/bills/';
 const ajax = new XMLHttpRequest();
 
